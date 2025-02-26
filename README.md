@@ -16,10 +16,8 @@ pip install scikit-learn qt_material qtawesome pywin32
 ![功能演示2](./SHOW/show2.gif)
 
 ![功能演示3](./SHOW/show3.gif)
-<video width="800" height="600" controls muted loop>
-  <source src="./SHOW/demo.mp4" type="video/mp4">
-  您的浏览器不支持视频标签
-</video>
+
+[![视频演示](https://sonnygong.github.io/videos/demo.mp4)]
 
 ## 接口文档
 TBD   后续更新
