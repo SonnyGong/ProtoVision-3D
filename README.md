@@ -3,12 +3,19 @@
 ## 安装库
 
 pip.exe install pyassimp==4.1.3
+
 pip install pyglm
+
 pip install glfw PyOpenGL pyassimp numpy imgui opencv-python mediapipe
+
 pip install pyrr
+
 pip install pyqt5 imageio
+
 pip install pywinstyles
+
 pip install scikit-learn qt_material qtawesome pywin32
+
 
 ## 演示
 ![功能演示1](./SHOW/show1.gif)
@@ -17,7 +24,9 @@ pip install scikit-learn qt_material qtawesome pywin32
 
 ![功能演示3](./SHOW/show3.gif)
 
-[![视频演示](https://sonnygong.github.io/videos/demo.mp4)]
+📹 [视频演示](https://www.bilibili.com/video/BV1nSsde5ELi)
+https://www.bilibili.com/video/BV1nSsde5ELi
+
 
 ## 接口文档
 TBD   后续更新
