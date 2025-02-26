@@ -1,0 +1,128 @@
+syntax = "proto3";
+
+
+message PointCloud {
+    float Range_m = 1;
+    float Elevation_deg = 2;
+    float Azimuth_deg = 3;
+    int32 Infrastructure = 4;
+}
+
+message Tracker {
+    float x = 1;
+    float y = 2;
+    float heading = 3;
+    int32 class_of_tk = 4;
+}
+
+message MountInfo {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+    float yaw = 4;
+}
+
+message COMMON_XYZ {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+}
+
+
+message FC_LINES {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+}
+
+message FreeSpace {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+}
+
+message GuardRail {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+}
+
+message VehicleInfo_Common {
+    float streeing_angle = 1;
+    int32 turnlight_l = 2;
+    int32 turnlight_r = 3;
+
+
+}
+message VehicleInfo_Radar {
+    float yawrate = 1;
+    float velocity = 2;
+    double chriptime = 3;
+
+}
+
+message SINGLE_ADAS_INFO {
+    int32 StateCurrent = 1;
+    int32 Warning_Level = 2;
+}
+
+message TOTAL_ADAS_INFO {
+    SINGLE_ADAS_INFO BSD_LCA_L = 1;
+    SINGLE_ADAS_INFO BSD_LCA_R = 2;
+    SINGLE_ADAS_INFO RCW = 3;
+    SINGLE_ADAS_INFO DOW_L = 4;
+    SINGLE_ADAS_INFO DOW_R = 5;
+    SINGLE_ADAS_INFO FCTB = 6;
+    SINGLE_ADAS_INFO RCTB = 7;
+    SINGLE_ADAS_INFO FCTA_L = 8;
+    SINGLE_ADAS_INFO FCTA_R = 9;
+    SINGLE_ADAS_INFO RCTA_L = 10;
+    SINGLE_ADAS_INFO RCTA_R = 11;
+
+}
+
+message ImageFrame {
+    // 图像的二进制数据
+    bytes data = 1;
+
+    // 图像的宽度（像素）
+    int32 width = 2;
+
+    // 图像的高度（像素）
+    int32 height = 3;
+
+    // 图像格式（例如"JPEG", "PNG"等）
+    string format = 4;
+
+    // 时间戳，用于标记帧的时间（可选）
+    int64 timestamp = 5;
+}
+
+message Frame {
+    repeated PointCloud pc1 = 1;
+    repeated PointCloud pc2 = 2;
+    repeated PointCloud pc3 = 3;
+    repeated PointCloud pc4 = 4;
+    repeated Tracker tk1 = 5;
+    repeated Tracker tk3 = 6;
+    repeated FreeSpace fs = 7;
+    MountInfo RadarMnt_1 = 8;
+    MountInfo RadarMnt_2 = 9;
+    MountInfo RadarMnt_3 = 10;
+    MountInfo RadarMnt_4 = 11;
+    repeated GuardRail gr1 = 12;
+    repeated GuardRail gr2 = 13;
+    repeated GuardRail gr3 = 14;
+    repeated GuardRail gr4 = 15;
+    ImageFrame Camera1 = 16;
+    ImageFrame Camera2 = 17;
+    ImageFrame Camera3 = 18;
+    ImageFrame Camera4 = 19;
+    VehicleInfo_Common VehicleCommonInfo = 20;
+    VehicleInfo_Radar Veh1 = 21;
+    VehicleInfo_Radar Veh2 = 22;
+    VehicleInfo_Radar Veh3 = 23;
+    VehicleInfo_Radar Veh4 = 24;
+    repeated FC_LINES fc_lines = 25;
+    TOTAL_ADAS_INFO ADAS_INFO = 26;
+}

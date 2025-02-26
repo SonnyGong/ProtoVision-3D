@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="ICON">
+    <file>image/ICON/lookcycle.png</file>
+    <file>image/ICON/lookon.png</file>
+    <file>image/ICON/lookreset.png</file>
+    <file>image/ICON/adas.png</file>
+    <file>image/ICON/fcline.png</file>
+    <file>image/ICON/fs.png</file>
+    <file>image/ICON/gr.png</file>
+    <file>image/ICON/pc.png</file>
+    <file>image/ICON/tracker.png</file>
+    <file>image/ICON/pcaccu.png</file>
+  </qresource>
+</RCC>

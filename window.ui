@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ProtoVision Screen</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="2" column="0">
+       <widget class="QSplitter" name="splitter">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="QWidget" name="gridLayoutWidget">
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QSplitter" name="splitter_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <widget class="QLabel" name="camera_1">
+             <property name="minimumSize">
+              <size>
+               <width>300</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+            <widget class="QLabel" name="camera_2">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+            <widget class="QLabel" name="camera_3">
+             <property name="minimumSize">
+              <size>
+               <width>300</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+            <widget class="QLabel" name="camera_4">
+             <property name="minimumSize">
+              <size>
+               <width>300</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="gridLayoutWidget_2">
+         <layout class="QGridLayout" name="gridLayout_4"/>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_network">
+    <property name="title">
+     <string>网络设置</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_display_choose">
+    <property name="title">
+     <string>显示筛选</string>
+    </property>
+    <addaction name="action_pc"/>
+    <addaction name="separator"/>
+    <addaction name="action_tracker"/>
+    <addaction name="separator"/>
+    <addaction name="action_fs"/>
+    <addaction name="separator"/>
+    <addaction name="action_gr"/>
+    <addaction name="separator"/>
+    <addaction name="action_fcline"/>
+    <addaction name="separator"/>
+    <addaction name="action_adas"/>
+   </widget>
+   <widget class="QMenu" name="menu_accu_pc">
+    <property name="title">
+     <string>点云累积设置</string>
+    </property>
+    <addaction name="action_pcaccu"/>
+   </widget>
+   <widget class="QMenu" name="menu_viewport">
+    <property name="title">
+     <string>视角设置</string>
+    </property>
+    <addaction name="action_look_reset"/>
+    <addaction name="separator"/>
+    <addaction name="action_look_on"/>
+    <addaction name="separator"/>
+    <addaction name="action_look_cycle"/>
+   </widget>
+   <widget class="QMenu" name="menu_screen_cap">
+    <property name="title">
+     <string>录屏</string>
+    </property>
+   </widget>
+   <addaction name="menu_network"/>
+   <addaction name="menu_display_choose"/>
+   <addaction name="menu_accu_pc"/>
+   <addaction name="menu_viewport"/>
+   <addaction name="menu_screen_cap"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_pc">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ProtoVision_Screen_ICON.qrc">
+     <normaloff>:/ICON/image/ICON/pc.png</normaloff>:/ICON/image/ICON/pc.png</iconset>
+   </property>
+   <property name="text">
+    <string>点云</string>
+   </property>
+  </action>
+  <action name="action_tracker">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ProtoVision_Screen_ICON.qrc">
+     <normaloff>:/ICON/image/ICON/tracker.png</normaloff>:/ICON/image/ICON/tracker.png</iconset>
+   </property>
+   <property name="text">
+    <string>目标</string>
+   </property>
+  </action>
+  <action name="action_fs">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ProtoVision_Screen_ICON.qrc">
+     <normaloff>:/ICON/image/ICON/fs.png</normaloff>:/ICON/image/ICON/fs.png</iconset>
+   </property>
+   <property name="text">
+    <string>Freespace</string>
+   </property>
+  </action>
+  <action name="action_gr">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ProtoVision_Screen_ICON.qrc">
+     <normaloff>:/ICON/image/ICON/gr.png</normaloff>:/ICON/image/ICON/gr.png</iconset>
+   </property>
+   <property name="text">
+    <string>护栏</string>
+   </property>
+  </action>
+  <action name="action_fcline">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ProtoVision_Screen_ICON.qrc">
+     <normaloff>:/ICON/image/ICON/fcline.png</normaloff>:/ICON/image/ICON/fcline.png</iconset>
+   </property>
+   <property name="text">
+    <string>车道线</string>
+   </property>
+  </action>
+  <action name="action_adas">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ProtoVision_Screen_ICON.qrc">
+     <normaloff>:/ICON/image/ICON/adas.png</normaloff>:/ICON/image/ICON/adas.png</iconset>
+   </property>
+   <property name="text">
+    <string>ADAS</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_pcaccu">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ProtoVision_Screen_ICON.qrc">
+     <normaloff>:/ICON/image/ICON/pcaccu.png</normaloff>:/ICON/image/ICON/pcaccu.png</iconset>
+   </property>
+   <property name="text">
+    <string>点云累积</string>
+   </property>
+  </action>
+  <action name="action_look_reset">
+   <property name="icon">
+    <iconset resource="ProtoVision_Screen_ICON.qrc">
+     <normaloff>:/ICON/image/ICON/lookreset.png</normaloff>:/ICON/image/ICON/lookreset.png</iconset>
+   </property>
+   <property name="text">
+    <string>复位</string>
+   </property>
+  </action>
+  <action name="action_look_on">
+   <property name="icon">
+    <iconset resource="ProtoVision_Screen_ICON.qrc">
+     <normaloff>:/ICON/image/ICON/lookon.png</normaloff>:/ICON/image/ICON/lookon.png</iconset>
+   </property>
+   <property name="text">
+    <string>俯视</string>
+   </property>
+  </action>
+  <action name="action_look_cycle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ProtoVision_Screen_ICON.qrc">
+     <normaloff>:/ICON/image/ICON/lookcycle.png</normaloff>:/ICON/image/ICON/lookcycle.png</iconset>
+   </property>
+   <property name="text">
+    <string>环视</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="ProtoVision_Screen_ICON.qrc"/>
+ </resources>
+ <connections/>
+</ui>
